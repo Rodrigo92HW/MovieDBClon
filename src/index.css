@@ -1,0 +1,344 @@
+/*Codigo General*/
+div#root {
+    background-color: #fff;
+    background-size: cover;
+    margin: 0 15%;
+    justify-content: space-around;
+}
+
+body {
+    margin-top: 82px;
+}
+
+/*Banner*/
+header.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c004c;
+    height: 62px;
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+h2.sitebanner {
+    text-shadow: 6px 6px #350035;
+    font-size: 50px;
+    margin: 0;
+    color: #2fd5d5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Buscador*/
+div.searchbar {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    background-image: url(https://i.imgur.com/aN6mGkU.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    min-width: fit-content;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+h3.welcome {
+    text-shadow: 1px 1px #000;
+    font-size: 72px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    align-self: start;
+    margin: 0;
+}
+
+p.welcome {
+    text-shadow: 1px 1px #000;
+    font-size: 42px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    margin: 0;
+}
+
+input.search {
+    height: 30px;
+    width: 800px;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 10px;  
+}
+
+button.search {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: Arial;
+	font-size:17px;
+	padding:8px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+button.search:hover {
+	background-color:#5cbf2a;
+}
+button.search:active {
+	position:relative;
+	top:1px;
+}
+
+/*Card Grids*/
+div.main-card-grid, div.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(450px, 1fr));;
+    justify-content:space-evenly;
+    margin-top: 30px;
+}
+
+a {
+    display: inline-block;
+    width: fit-content;  
+}
+
+/*Card*/
+
+div.card {
+    width: max-content;
+    height: max-content;
+    margin-bottom: 20px;
+    border: 5px;
+}
+
+div.img_rate {
+    position: relative;
+    margin: 3px;
+    width: 300px;
+    height: 450px;
+}
+
+img.poster {
+    width: 300px;
+    height: 450px;
+    border-radius: 10%;
+}
+
+div.img_rate.rate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    padding: auto;
+    margin: 4px 8px 8px 4px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+/* Card Full */
+
+div.card-full {
+    align-content: center;
+    align-items: center;    
+    display: grid;
+    background: transparent;
+    justify-content:space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10%;
+    font-size: 20px;
+    column-gap: 10px;
+    grid-template-areas: 'posterf   titlef    titlef'
+                         'posterf   generof   generof'
+                         'posterf   lenguajef estrenof'
+                         'posterf   descripf  descripf'
+                         'posterf   descripf  descripf'
+}
+
+div.card-full p {
+    margin: 0;
+    font-size: 25px;
+    text-align: start;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.img_rate-full {
+    grid-area: posterf;
+    height: 100%;
+    position: relative;
+}
+
+div.img_rate-full.rate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 40px;
+    height: 40px;
+    padding: auto;
+    margin: 4px 8px 8px 4px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+div.title-full {
+    grid-area: titlef;
+    height: fit-content;
+    background: transparent;
+}
+
+div.genre-full {
+    grid-area: generof;
+    height: fit-content;
+    top: 50%;
+    text-align: start;
+    align-self: center;
+}
+
+div.language-full {
+    grid-area: lenguajef;
+    height: fit-content;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+div.date-full {
+    grid-area: estrenof; 
+    height: fit-content;
+    text-align: start;
+}
+
+div.overview-full {
+    grid-area: descripf;
+    height: fit-content;
+    text-align: start;
+}
+
+img.background-full {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.card-grid-search {
+    display: grid;
+    grid-template-areas: 'busqueda'
+                         'resultado';
+}
+
+div.movie-search {
+    grid-area: busqueda;
+    text-transform: capitalize;
+    text-decoration: underline 3px;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+div.movie-search-map {
+    grid-area: resultado;
+}
+
+img.background-full {
+    content: "";
+    filter: alpha(opacity=60);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+}
+
+/* Pagina de Error */
+div.Error404 {
+    background-image: url(https://kicksdigitalmarketing.com/wp-content/uploads/2019/09/iStock-1142986365.jpg);
+    background-repeat: no-repeat;
+    size: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* Icons */
+div.icons {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+
+left:0;
+bottom:0;
+right:0;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 50px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	bottom: 0;
+	position:relative;
+}
+  
+.fa:hover {
+	opacity: 0.7;
+}
+  
+/* Facebook */
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+  
+/* Twitter */
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+	background: #bb0000;
+	color: white;
+}
+  
+/* Instagram */
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
